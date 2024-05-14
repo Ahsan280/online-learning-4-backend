@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-d$-obma4-i)*&ngbzbhp2o77l%yj$*bzh(gpnul=4k=f%afwo&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = os.environ.get('DEBUG', 'True')=="True"
-DEBUG=False
+DEBUG=True
 
 ALLOWED_HOSTS = ['online-learning-backend-api.onrender.com', 'http://127.0.0.1:8000',]
 
@@ -98,11 +98,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# if not DEBUG:
-#     DATABASES = {
-#         # 'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
-#         'default':dj_database_url.parse('postgres://online_learning_db_user:zH8GNuL7DmUYIMlHBL8Zwz5cAhbW1HkP@dpg-cp1dr8i1hbls73bjq4fg-a.oregon-postgres.render.com/online_learning_db')
-#     }
+
+DATABASES = {
+    # 'default':dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default':dj_database_url.parse('postgres://online_learning_db_user:zH8GNuL7DmUYIMlHBL8Zwz5cAhbW1HkP@dpg-cp1dr8i1hbls73bjq4fg-a.oregon-postgres.render.com/online_learning_db')
+}
 # else:
 #     DATABASES = {
 #         'default': {
